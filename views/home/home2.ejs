@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous" />
+    <style>
+        body {
+            min-height: 100vh;
+            font-family: Roboto, Arial;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            background: #444;
+        }
+
+        body {
+            min-height: 100%;
+        }
+
+        .button-wrap {
+            position: relative;
+            text-align: center;
+            /* top: 50%; */
+        }
+
+        .button-label {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            cursor: pointer;
+            color: #292929;
+            border-radius: 0.25em;
+            background: #efefef;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
+                inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .button-label h1 {
+            font-size: 1em;
+            font-family: "Lato", sans-serif;
+        }
+
+        .button-label:hover {
+            background: #d6d6d6;
+            color: #101010;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
+                inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+        }
+
+        .button-label:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2),
+                inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+        }
+
+        :checked+.button-label {
+            background: #1f4394;
+            color: #efefef;
+        }
+
+        .button-label:hover {
+            background: #1f4394;
+            color: #e2e2e2;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container shadow bg-white rounded">
+        <h1 class="text-center">Transiciones?</h1>
+
+        <div class="button-wrap">
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="1" />
+            <label class="button-label col-sm-2" for="1" style="max-width: 10rem; min-height: 3.8rem;">
+                <span>
+                    <h1>Totalmente desacuerdo</h1>
+                </span>
+                <span>1</span>
+            </label>
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="2" />
+            <label class="button-label col-sm-2" for="2" style="max-width: 10rem; min-height: 3.8rem; padding-top: 1.8rem;">
+                <span class="text-center">
+                    <h1>En desacuerdo</h1>
+                </span>
+                <span>2</span>
+            </label>
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="3" />
+            <label class="button-label col-sm-2" for="3" style="max-width: 10rem; min-height: 3.8rem;">
+                <span>
+                    <h1>Ligeramente desacuerdo</h1>
+                </span>
+                <span>3</span>
+            </label>
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="4" />
+            <label class="button-label col-sm-2" for="4" style="max-width: 10rem; min-height: 3.8rem;">
+                <span>
+                    <h1>Ligeramente deacuerdo</h1>
+                </span>
+                <span>4</span>
+            </label>
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="5" />
+            <label class="button-label col-sm-2" for="5" style="max-width: 10rem; min-height: 3.8rem; padding-top: 1.8rem;">
+                <span>
+                    <h1> En acuerdo</h1>
+                </span>
+                <span>5</span>
+            </label>
+            <input class="hidden radio-label col-sm-2" type="radio" name="accept-offers" id="6" />
+            <label class="button-label col-sm-2"  for="7" style="max-width: 10rem; min-height: 3.8rem;">
+                <span>
+                    <h1>Totalmente acuerdo</h1>
+                </span>
+                <span>6</span>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+      integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt"
+      crossorigin="anonymous"
+    />
+    <style>
+        
+      .radio {
+        margin: 16px 0;
+        display: block;
+        cursor: pointer;
+      }
+      .radio input {
+        display: none;
+      }
+      .radio input + span {
+        line-height: 22px;
+        height: 22px;
+        padding-left: 22px;
+        display: block;
+        position: relative;
+      }
+      .radio input + span:not(:empty) {
+        padding-left: 30px;
+      }
+      .radio input + span:before,
+      .radio input + span:after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        display: block;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+      .radio input + span:before {
+        background: #d1d7e3;
+        transition: background 0.2s ease,
+          transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+      }
+      .radio input + span:after {
+        background: #fff;
+        transform: scale(0.78);
+        transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+      }
+      .radio input:checked + span:before {
+        transform: scale(1.04);
+        background: #1f4394;
+      }
+      .radio input:checked + span:after {
+        transform: scale(0.4);
+        transition: transform 0.3s ease;
+      }
+      .radio:hover input + span:before {
+        transform: scale(0.92);
+      }
+      .radio:hover input + span:after {
+        transform: scale(0.74);
+      }
+      .radio:hover input:checked + span:after {
+        transform: scale(0.4);
+      }
+      body {
+        min-height: 100vh;
+        font-family: Roboto, Arial;
+        color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body .twitter {
+        position: fixed;
+        display: block;
+        right: 24px;
+        bottom: 24px;
+        opacity: 0.5;
+        color: #212533;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.4s ease;
+      }
+      body .twitter:hover {
+        opacity: 1;
+      }
+      body .twitter img {
+        display: block;
+        height: 36px;
+      }
+      
+    </style>
+  </head>
+
+  <body class="">
+    <div class="container shadow m-3 p-3 mb-5  bg-white rounded">
+        <h1 class="text-center"> Transiciones? </h1>
+      <div class="container row">
+        <div class="mx-auto">
+          <label class="radio">
+            <input type="radio" name="r" value="1" checked />
+            <span>Totalmente desacuerdo</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="2" />
+            <span>Desacuerdo</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="3" />
+            <span>Ligeramente desacuerdo</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="3" />
+            <span>Ligeramente deacuerdo</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="3" />
+            <span>Deacuerdo</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="r" value="3" />
+            <span>Totalmente deacuerdo</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
