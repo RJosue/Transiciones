@@ -1,0 +1,96 @@
+<plugdo-form2>
+    <data>
+        {
+        "current" : {
+        "title": "pregunto1",
+        "index": 0,
+        "id": 1
+        },
+        "contenido": [
+        {
+        "title": "pregunto1",
+        "id": 1
+        },
+        {
+        "title": "pregunto2",
+        "id": 2
+        },
+        {
+        "title": "pregunto3",
+        "id": 3
+        }]
+        }
+    </data>
+    <template>
+        
+        <div class="container mx-auto" id="btnPreguntas">
+            <h3 class="text-center">[json:current.title]</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary btn-lg"> Totalmente desacuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+                <label class="btn btn-primary btn-lg"> Desacuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+                <label class="btn btn-primary btn-lg"> Ligeramente desacuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+                <label class="btn btn-primary btn-lg"> Ligeramente acuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+                <label class="btn btn-primary btn-lg"> Deacuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+                <label class="btn btn-primary btn-lg"> Totalmente deacuerdo
+                    <input id="radio1" name="opcion" type="radio" value="1" data-id="[json:current.id]" />
+                </label>
+            </div>
+            <div class="row my-4">
+                <span id="prev" class="carousel-control-prev-icon mx-auto" aria-hidden="true"></span>
+                <span id="next" class="carousel-control-next-icon mx-auto" aria-hidden="true">               
+            </div>
+        </div>
+        
+    </template>
+<script>
+    $(document).ready(function () {
+        $("#next").click(function (e) {
+            e.preventDefault();
+            var data = view.getData("forma2");
+            var nextIndex = data.current.index + 1;
+            if (nextIndex <= data.contenido.length - 1) {
+                data.current = data.contenido[nextIndex]; //Set next index content
+                data.current.index = nextIndex; //Set the new current index
+                view.setData("forma2", data);
+            }
+            else {
+                alert("Ya no hay mas pregunta."); //Terminar APL
+            }
+        });
+
+        $("#prev").click(function (e) {
+            e.preventDefault();
+            var data = view.getData("forma2");
+            var prevIndex = data.current.index - 1;
+            if (prevIndex >= 0) {
+                data.current = data.contenido[prevIndex];
+                data.current.index = prevIndex;
+                view.setData("forma2", data);
+            } else {
+                alert("No hay una pregunta previa.");
+            }
+
+        });
+
+        //Funcion para obtener el valor de la opcion seleccionada.
+        $("input[name=opcion]").click(function () {
+            var opcion = $("input[name=opcion]:checked");
+            var valor = opcion.val();
+            var id = opcion.attr("data-id");
+            //if para ir a la siguiente pregunnta
+            console.log("opcion: " + valor + " / de la pregunta:" + id);
+        });
+    });
+
+</script>
+</plugdo-form2>
