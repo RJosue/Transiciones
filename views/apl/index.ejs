@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../partials/headerHome/header%>
+
+<body>  
+<!-- Componente  del formulario -->
+
+        <plugdo-form name="forma" src="/templates/form-template.html"></plugdo-form>
+       
+    <script>
+        let { view, template } = plugdo;
+        $(document).ready(function () {
+            view.load();
+        });
+        
+           request.get("/apl/get/json","",function(response){
+               var data = data.response.data;
+               view.setData("forma", data);
+           });
+
+        // var misCabeceras = new Headers();
+        //     var miInit = {
+        //         method: 'GET',
+        //         headers: misCabeceras,
+        //         mode: 'cors',
+        //         cache: 'default'
+        //     };
+
+
+        // fetch("/api/apl/get/json")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (myJson) {
+        //             console.log(myJson);
+        //         })
+    </script>
+
+</body>
+
+</html>
