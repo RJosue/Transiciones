@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registar Usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style type="text/css">
+        .shadow {
+            background-color: #f9f9f9;
+            margin-top: 10x;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px 24px;
+        }
+        .btncrear{
+            background-color: #1f4394;
+            width: 15rem;
+        }
+        </style>
+</head>
+<body>
+        
+    </style>
+</head>
+
+<body>
+    <div class="container shadow mt-3">
+
+        <br>
+        <h2 class="text-center">Crear Participante</h2>
+        <form class="form-horizontal mx-auto" action="#">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nombre">*Nombres:</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduzca su nombre" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="apellido">*Apellidos:</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="apellido" placeholder="Introduzca su apellido" required>
+                </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2" for="escSexo">*Sexo:</label>
+                    <div class="col-sm-12">
+                        <select class="custom-select" id="esctipo" name="capatipo" required>
+                            <option selected disabled value="">Escoga se genero </option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="puesto">*Puesto:</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="puesto" placeholder="Introduzca su puesto de trabajo" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="correo">*Correo:</label>
+                <div class="col-sm-12">
+                    <input type="email" class="form-control" id="correo" placeholder="Introduzca su correo" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="fechanacimineto">*Fecha de Nacimineto:</label>
+                <div class="col-sm-12">
+                    <input type="date" class="form-control" id="fechanacimineto"  required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="referencia">Referencia:</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="referencia">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="genero">*Genero:</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="genero"required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nivelAcademico">Nivel academico:</label>
+                <div class="col-sm-12">
+                    <select class="custom-select" id="nivelAcademico" name="nivelAcademico">
+                        <option selected disabled value="">Escoga su nivel academico</option>
+                        <option value="4">Primaria</option>
+                        <option value="1">Pre-media</option>
+                        <option value="2">Universidad (en curso)</option>
+                        <option value="3">Universidad Completada</option>
+                    </select>
+                </div>
+        </div>
+            <button type="submit" class="btn btn-primary mx-3 btncrear" style=" margin-right:60px;">Crear</button>
+        </form>
+     </div>   
+</body>
+</html>
