@@ -9,11 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "@dellasera/plugdo-server": "^1.0.16",
-    "jspdf": "^1.5.3",
-=======
->>>>>>> ChanBranch
     "mysql-connector-plugdo-js": "^1.0.0",
     "plugdo-node": "^1.0.2"
   }

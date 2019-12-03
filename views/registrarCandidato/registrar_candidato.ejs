@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registar Usuario</title>
+    <script src="//cdn.plugdo.com/js/plugdo-dependency.min.js"></script>
+    <script src="//cdn.plugdo.com/release/2.6/plugdoeui.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style type="text/css">
         .shadow {
@@ -29,7 +31,7 @@
 
         <br>
         <h2 class="text-center">Crear Participante</h2>
-        <form class="form-horizontal mx-auto" action="#">
+        <form class="form-horizontal mx-auto" id="formCrearCandidato" action="" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nombre">*Nombres:</label>
                 <div class="col-sm-12">
@@ -45,7 +47,7 @@
             <div class="form-group">
                     <label class="control-label col-sm-2" for="escSexo">*Sexo:</label>
                     <div class="col-sm-12">
-                        <select class="custom-select" id="esctipo" name="capatipo" required>
+                        <select class="custom-select" id="escoSexo" name="escoSexo" required>
                             <option selected disabled value="">Escoga se genero </option>
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
@@ -87,15 +89,23 @@
                 <div class="col-sm-12">
                     <select class="custom-select" id="nivelAcademico" name="nivelAcademico">
                         <option selected disabled value="">Escoga su nivel academico</option>
-                        <option value="4">Primaria</option>
-                        <option value="1">Pre-media</option>
-                        <option value="2">Universidad (en curso)</option>
-                        <option value="3">Universidad Completada</option>
+                        <option value="1">Primaria</option>
+                        <option value="2">Pre-media</option>
+                        <option value="3">Universidad (en curso)</option>
+                        <option value="4">Universidad Completada</option>
                     </select>
                 </div>
         </div>
-            <button type="submit" class="btn btn-primary mx-3 btncrear" style=" margin-right:60px;">Crear</button>
+            <button id="btnCrear" type="submit" class="btn btn-primary mx-3 btncrear" style=" margin-right:60px;">Crear</button>
         </form>
      </div>   
 </body>
+<script>
+    let {request} = plugdo;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="/js/registro-candidato.js"></script>
+
+
+
 </html>
