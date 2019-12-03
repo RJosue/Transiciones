@@ -1,7 +1,7 @@
 mvc.controller({
     name: "apl",
     action: "index",
-    path: "/"
+    path: "/apl-test"
 }, "aplQuest", function (req, aplQuest, send) {
     $apiResponse(aplQuest, send);
 });
