@@ -15,6 +15,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 <style>
 
@@ -134,7 +135,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -155,12 +156,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=password]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder, input[type=password]:placeholder {
   color: #cccccc;
 }
 
@@ -292,12 +293,11 @@ input[type=text]:placeholder {
         </div>
 
         <!-- Login Form -->
-        <form>
-            <input type="text" id="correo" class="fadeIn second" name="login" placeholder="Correo">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-            <input type="submit" class="fadeIn fourth" value="Iniciar Sessión">
-        </form>
 
+            <input type="text" id="user" class="fadeIn second" name="login" placeholder="Usuario">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+            <input type="submit" id="btnLogin" class="fadeIn fourth" value="Iniciar Sessión">
+  
         <!-- Remind Passowrd -->
         <div id="formFooter">
             <a class="underlineHover" href="#">¿Olvidaste tu contraseña?</a>
@@ -306,7 +306,13 @@ input[type=text]:placeholder {
     </div>
 </div>
 
+<script src="/js/signin.js"></script>
+<script src="//cdn.plugdo.com/js/2.5/plugdo-dependency.min.js"></script>
+<script src="../../app/nex.js"></script>
+<script src="https://cdn.plugdo.com/js/plugdo-dependency.min.js"></script>
 
+<script src="//cdn.plugdo.com/js/2.5/plugdoeui.min.js"></script>
+<script src="../../app/global.js"></script>
 </body>
 
 </html>
