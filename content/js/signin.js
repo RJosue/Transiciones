@@ -1,16 +1,24 @@
+let { request } = plugdo;
 $("#btnLogin").click(function (e) {
     e.preventDefault();
     var usuario = $("#user").val();
-    var contra = $("#password").val();
+    var contra = $("#password").val();   
     if (user !== "" && password !== "") {
         var datos = {
             "user": usuario,
             "password": contra
+
         }
-        $.post("/api/signin/get/json", datos, function (data) {
-            console.log(data);
+        request.post("/api/signin/get/json", datos, function (data) {
+            if (data.response[0].can_nombre.length) {
+                alert("Has iniciado sessión correctamente.");
+                alert(JSON.stringify(datos));
+                // window.location.href = "/apl-test";
+            } else{
+                alert("Usuario o contraseña incorrecto, intentelo nuevamente!");
+            }
         });
-  }
+    }
 });
 
 // request.get("api/apl/get/json", "", function (data) {

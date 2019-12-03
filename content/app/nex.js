@@ -7,7 +7,7 @@ $.get("/api/apl/get/json", function (data, status) {
 
 
 // request.get("api/apl/get/json", "", function (data) {
-//     var datas = data.response.data;
+//     var datas = data.respo  nse.data;
 //     console.log(datas);
 //     view.setData("forma", datas);
 // });

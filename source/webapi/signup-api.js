@@ -1,3 +1,5 @@
+
+
 mvc.api(
   {
     name: "signin",
@@ -12,5 +14,7 @@ mvc.api(
 );
 
 function postMethod(req, verifyUser, send) {
+  var header = req;
+  console.log(header)
   verifyUser.verifyUser(req.body, send);
 }
