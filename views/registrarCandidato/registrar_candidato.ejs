@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registar Usuario</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="//cdn.plugdo.com/js/plugdo-dependency.min.js"></script>
     <script src="//cdn.plugdo.com/release/2.6/plugdoeui.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,23 +32,23 @@
 
         <br>
         <h2 class="text-center">Crear Participante</h2>
-        <form class="form-horizontal mx-auto" id="formCrearCandidato" action="" method="post">
+        <form class="form-horizontal mx-auto" id="formCrearCandidato "   method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nombre">*Nombres:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="nombre" placeholder="Introduzca su nombre" required>
+                    <input type="text" class="form-control"  id="nombre" name="Cname"  eui-bind="resquestForm.Cname" placeholder="Introduzca su nombre" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="apellido">*Apellidos:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="apellido" placeholder="Introduzca su apellido" required>
+                    <input type="text" class="form-control" id="apellido" name="Capellido" eui-bind="resquestForm.Capellido" placeholder="Introduzca su apellido" required>
                 </div>
             </div>
             <div class="form-group">
                     <label class="control-label col-sm-2" for="escSexo">*Sexo:</label>
                     <div class="col-sm-12">
-                        <select class="custom-select" id="escoSexo" name="escoSexo" required>
+                        <select class="custom-select" id="escoSexo" name="CescoSexo" eui-bind="resquestForm.CescoSexo" required>
                             <option selected disabled value="">Escoga se genero </option>
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
@@ -57,37 +58,37 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="puesto">*Puesto:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="puesto" placeholder="Introduzca su puesto de trabajo" required>
+                    <input type="text" class="form-control" id="puesto"  name="Cpuesto"  eui-bind="resquestForm.Cpuesto" placeholder="Introduzca su puesto de trabajo" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="correo">*Correo:</label>
                 <div class="col-sm-12">
-                    <input type="email" class="form-control" id="correo" placeholder="Introduzca su correo" required>
+                    <input type="email" class="form-control" id="correo"  name="Ccorreo"  eui-bind="resquestForm.Ccorreo" placeholder="Introduzca su correo" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-4" for="fechanacimineto">*Fecha de Nacimineto:</label>
                 <div class="col-sm-12">
-                    <input type="date" class="form-control" id="fechanacimineto"  required>
+                    <input type="date" class="form-control" id="fechanacimineto"  name="Cfechanacimineto"  eui-bind="resquestForm.Cfechanacimineto" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="referencia">Referencia:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="referencia">
+                    <input type="text" class="form-control" id="referencia" name="Creferencia"  eui-bind="resquestForm.Creferencia" placeholder="Referido por:" >
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="genero">*Genero:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" id="genero"required>
+                    <input type="text" class="form-control" id="genero" name="Cgenero"  eui-bind="resquestForm.Cgenero" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="nivelAcademico">Nivel academico:</label>
                 <div class="col-sm-12">
-                    <select class="custom-select" id="nivelAcademico" name="nivelAcademico">
+                    <select class="custom-select" id="nivelAcademico" name="CnivelAcademico" eui-bind="resquestForm.CnivelAcademico">
                         <option selected disabled value="">Escoga su nivel academico</option>
                         <option value="1">Primaria</option>
                         <option value="2">Pre-media</option>

@@ -1,11 +1,7 @@
 mvc.api({
     name: "apl",
     action: "get"
-  // method: {
-  //     post: getOneQuestion,
-  //     put: updateUserAnswer,
-  //     delete: deleteUserAnswer
-  //    }
+
 }, "aplQuest", function (req, aplQuest, send) {   
         message = {};
         let response = {};
