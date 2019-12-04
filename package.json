@@ -11,6 +11,7 @@
   "dependencies": {
     "crypto-js": "^3.1.9-1",
     "mysql-connector-plugdo-js": "^1.0.0",
-    "plugdo-node": "^1.0.2"
+    "plugdo-node": "^1.0.2",
+    "uuid": "^3.3.3"
   }
 }

@@ -2,6 +2,7 @@ mvc.controller({
     name: "apl",
     action: "index",
     path: "/apl-test"
-}, "aplQuest", function (req, aplQuest, send) {
+}, "verifyUser", "aplQuest", function (req, verifyUser, aplQuest, send) {
+        verifyUser.verifyUser(req, send);
     $apiResponse(aplQuest, send);
 });

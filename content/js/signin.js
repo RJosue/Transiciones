@@ -10,9 +10,10 @@ $("#btnLogin").click(function (e) {
 
         }
         request.post("/api/signin/get/json", datos, function (data) {
-            if (data.response[0].can_nombre.length) {
+            console.log(data);
+            if (data) {
                 alert("Has iniciado sessión correctamente.");
-                alert(JSON.stringify(datos));
+                // alert(JSON.stringify(datos));
                 // window.location.href = "/apl-test";
             } else{
                 alert("Usuario o contraseña incorrecto, intentelo nuevamente!");
