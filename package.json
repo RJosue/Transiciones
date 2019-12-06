@@ -13,6 +13,7 @@
     "mysql-connector-plugdo-js": "^1.0.0",
     "plugdo-node": "^1.0.2",
     "random-user": "^2.0.2",
-    "secure-random-password": "^0.2.1"
+    "secure-random-password": "^0.2.1",
+    "uuid": "^3.3.3"
   }
 }

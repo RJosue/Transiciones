@@ -3,8 +3,10 @@
     <data>
        {
             "current" : {
-            "cue_pregunta" : "",
-            "cue_id" : ""
+                "cue_pregunta" : "",
+                "cue_id" : "",
+                "index" : 0,
+                "respuesta" : ""
             }
             
        }
@@ -21,32 +23,32 @@
                         <div class="row mx-auto">
                             <div class="col-sm-6">
                                 <div class="inputGroup">
-                                    <input id="radio1" name="radio" type="radio" value="1" data-id="[json:current.id]" />
+                                    <input id="radio1" name="radio" type="radio" value="1" onchange="actualizarDatos(this)" onchange="actualizarDatos(this)" data-id="[json:current.cue_id]" />
                                     <label class="shadow p-3 mb-3 bg-white rounded" for="radio1">Totalmente
                                         desacuerdo</label>
                                 </div>
                                 <div class="inputGroup">
-                                    <input id="radio2" name="radio" type="radio" value="2" data-id="[json:current.id]"/>
+                                    <input id="radio2" name="radio" type="radio" value="2" onchange="actualizarDatos(this)" data-id="[json:current.cue_id]"/>
                                     <label class="shadow p-3 mb-3 bg-white rounded" for="radio2">Desacuerdo</label>
                                 </div>
                                 <div class="inputGroup">
-                                    <input id="3" name="radio" type="radio"value="3"    data-id="[json:current.id]"      />
+                                    <input id="3" name="radio" type="radio"value="3"    onchange="actualizarDatos(this)" data-id="[json:current.cue_id]" />
                              <label class="shadow p-3 mb-3 bg-white rounded" for="3">Ligeramente
                                         desacuerdo</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="inputGroup">
-                                    <input id="radio4" name="radio" type="radio"value="4"  data-id="[json:current.id]"/>
+                                    <input id="radio4" name="radio" type="radio"value="4"  onchange="actualizarDatos(this)" data-id="[json:current.cue_id]"/>
                                     <label class="shadow p-3 mb-3 bg-white rounded" for="radio4">Ligeramente
                                         acuerdo</label>
                                 </div>
                                 <div class="inputGroup">
-                                    <input id="radio5" name="radio" type="radio"value="5"  data-id="[json:current.id]"/>
+                                    <input id="radio5" name="radio" type="radio"value="5"  onchange="actualizarDatos(this)" data-id="[json:current.cue_id]"/>
                                     <label class="shadow p-3 mb-3 bg-white rounded" for="radio5">Deacuerdo</label>
                                 </div>
                                 <div class="inputGroup">
-                                    <input id="radio6" name="radio" type="radio" value="6" data-id="[json:current.id]"/>
+                                    <input id="radio6" name="radio" type="radio" value="6" onchange="actualizarDatos(this)" data-id="[json:current.cue_id]"/>
                                     <label class="shadow p-3 mb-3 bg-white rounded" for="radio6">Totalemente
                                         deacuerdo</label>
                                 </div>
@@ -83,11 +85,11 @@
         $("#next").click(function (e) {
             e.preventDefault();
             var data = view.getData("forma");
-            console.log(data)
             var nextIndex = data.current.index + 1;
             if (nextIndex <= dataLength - 1) {
                 data.current = data.contenido[nextIndex]; //Set next index content
                 data.current.index = nextIndex; //Set the new current index
+                                console.log(data);
                 view.setData("forma", data);
             }
             else {
@@ -106,17 +108,7 @@
             } else {
                 alert("No hay una pregunta previa.");
             }
-
         });
-
-        //Funcion para obtener el valor de la opcion seleccionada.
-        $("input[name=radio]").click(function () {
-            var opcion = $("input[name=radio]:checked");
-            var valor = opcion.val();
-            var id = opcion.attr("data-id");
-            //if para ir a la siguiente pregunta
-            console.log("opcion: " + valor + " / de la pregunta:" + id);
-        })
     });
 </script>
 </plugdo-form>

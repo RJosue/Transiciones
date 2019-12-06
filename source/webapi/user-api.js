@@ -1,7 +1,8 @@
 mvc.api({
-    
-    name: "user",
+    name: "userId",
     action: "get"
-},"DataUser",function (req , DataUser, send) {
-   
+}, "userServices", function (req, userServices, send) {
+        var token = req.plugdo.header.cookie;
+        var response = userServices.getUserId(token);
+        send(response);
 })
