@@ -1,7 +1,7 @@
 mvc.controller({
     name: "registrarCandidato",
     action: "registrar_candidato",
-    path: "/registroCandidato"
+    path: "/registrarCandidato"
 }, function (req) {
     return{}
 })

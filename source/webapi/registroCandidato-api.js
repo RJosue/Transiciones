@@ -6,26 +6,15 @@ mvc.api(
       post: postMethod
     }
   },
-  function(req, send) {
-    return { hola: "hola" };
+  "registroCandidato",function(req,registroCandidato,send) {
+    return {};
   }
 );
 
-function postMethod(req, send) {
+function postMethod(req,registroCandidato,send) {
   mesasage = req.body;
-  let response = {};
-  plugdo.collect("registroCandidato").get(mesasage, function(data, err) {
-    if (err) {
-      send({}, err);
-    }
-    response.result = data;
+  registroCandidato.cargarDatos(mesasage).then(function (response) {
+    console.log(response);
     send(response);
   });
 }
-// let { ready, validator, binder, request } = plugdo;
-// binder();
-// name="Cname"  eui-bind="requestDemo.Cname"
-
-
-// var messagedata = {Email : requestMessage.Email.value,
-// Name : requestMessage.Name.value,Message : requestMessage.Message.value};
