@@ -5,14 +5,14 @@ mvc.api(
     methods: {
       post: postMethod
     }
-  },"verifyUser", function(req, send) {
+  },"singIn",  function(req, send) {
     send({ user });
-    // verifyUser.verifyUser(req.body.user, req.body.password);
   }
 );
 
-function postMethod(req, verifyUser, send) {
-  var header = req;
-  // console.log(header)
-  verifyUser.verifyUser(req, send);
+function postMethod(req, singIn, send) {
+  singIn.signIn(req).then(function (response) {
+    send(response);
+  });
+
 }

@@ -12,7 +12,7 @@ plugdo.collector("verifyUser", {
   parameter: ["json:user", "json:password"] //Envio como parametro
 });
 
-plugdo.collector("insertToken", {
+plugdo.collector("session", {
   type: "db",
   action: "mysql",
   server: {
@@ -22,6 +22,6 @@ plugdo.collector("insertToken", {
     database: "transiciones"
   },
   queryType: "stored-procedure",
-  query: "call SP_LoginToken",
-  parameter: ["json:token"] //Envio como parametro
+  query: "call SP_session",
+  parameter: ["json:guid", "json:idUser", "json:rol", "json:ip"] //Envio como parametro
 });
